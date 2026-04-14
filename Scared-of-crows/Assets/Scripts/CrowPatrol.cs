@@ -6,7 +6,7 @@ public class CrowPatrol : MonoBehaviour
     public float moveSpeed = 2f;
     public float patrolTime = 3f;
 
-    private float detectionRadius = 1.5f;
+    private float detectionRadius = 2f;
     private float chaseSpeed = 4f;
 
     private float timer;
