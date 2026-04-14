@@ -996,6 +996,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pike
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a10ff3d07424fb4469f995cd5aad1afe, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2585745842689532128, guid: a10ff3d07424fb4469f995cd5aad1afe, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
