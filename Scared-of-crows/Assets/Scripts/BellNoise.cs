@@ -6,9 +6,9 @@ public class BellNoise : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
 
-    [SerializeField] private float baseRunVolume = 0.7f;   // يبدأ عالي
-    [SerializeField] private float maxRunVolume = 1f;      // أعلى مستوى
-    [SerializeField] private float boostSpeed = 2f;        // سرعة الزيادة
+    [SerializeField] private float baseRunVolume = 0.7f;
+    [SerializeField] private float maxRunVolume = 1f;
+    [SerializeField] private float boostSpeed = 2f;
 
     private AudioSource bellAudio;
 
@@ -39,12 +39,10 @@ public class BellNoise : MonoBehaviour
         {
             if (!bellAudio.isPlaying)
             {
-                // 🔥 يبدأ مباشرة بصوت عالي
                 bellAudio.volume = baseRunVolume;
                 bellAudio.Play();
             }
 
-            // 🔼 يزيد شوي فوقه
             bellAudio.volume = Mathf.MoveTowards(
                 bellAudio.volume,
                 maxRunVolume,
@@ -55,7 +53,6 @@ public class BellNoise : MonoBehaviour
         }
         else
         {
-            // ❌ يوقف مباشرة بدون تدرج
             if (bellAudio.isPlaying)
                 bellAudio.Stop();
 
