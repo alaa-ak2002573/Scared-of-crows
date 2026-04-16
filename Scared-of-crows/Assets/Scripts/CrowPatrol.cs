@@ -17,7 +17,9 @@ public class CrowPatrol : MonoBehaviour
     private Vector3 startPosition;
     private Quaternion startRotation;
     private bool isReturning = false;
-
+    public bool IsChasing => isChasing;
+    public float DetectionRadius => detectionRadius;
+    public Transform Player => player;
     void Start()
     {
         currentDirection = transform.forward;
