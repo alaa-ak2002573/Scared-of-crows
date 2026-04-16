@@ -95,4 +95,13 @@ public class CrowPatrol : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
+    public void ResetToStart()
+    {
+        transform.position = startPosition;
+        transform.rotation = startRotation;
+        isChasing = false;
+        isReturning = false;
+        timer = 0;
+        currentDirection = transform.forward;
+    }
 }

@@ -6,9 +6,9 @@ public class BellNoise : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
 
-    [SerializeField] private float baseRunVolume = 0.7f;
-    [SerializeField] private float maxRunVolume = 1f;
-    [SerializeField] private float boostSpeed = 2f;
+    [SerializeField] private float baseRunVolume = 0.2f;
+    [SerializeField] private float maxRunVolume = 0.025f;
+    [SerializeField] private float boostSpeed = 5f;
 
     private AudioSource bellAudio;
 
@@ -35,27 +35,34 @@ public class BellNoise : MonoBehaviour
         bool isMoving = starterAssetsInputs.move.sqrMagnitude > 0.01f;
         bool isRunning = starterAssetsInputs.sprint;
 
-        if (isMoving && isRunning)
+        if (isMoving)
         {
             if (!bellAudio.isPlaying)
-            {
-                bellAudio.volume = baseRunVolume;
                 bellAudio.Play();
+
+            if (isRunning)
+            {
+                bellAudio.volume = Mathf.MoveTowards(
+                    bellAudio.volume,
+                    maxRunVolume,
+                    boostSpeed * Time.deltaTime
+                );
+                IsRinging = true;
             }
-
-            bellAudio.volume = Mathf.MoveTowards(
-                bellAudio.volume,
-                maxRunVolume,
-                boostSpeed * Time.deltaTime
-            );
-
-            IsRinging = true;
+            else
+            {
+                bellAudio.volume = Mathf.MoveTowards(
+                    bellAudio.volume,
+                    baseRunVolume * 0.05f,
+                    boostSpeed * Time.deltaTime
+                );
+                IsRinging = false;
+            }
         }
         else
         {
             if (bellAudio.isPlaying)
                 bellAudio.Stop();
-
             IsRinging = false;
         }
     }
