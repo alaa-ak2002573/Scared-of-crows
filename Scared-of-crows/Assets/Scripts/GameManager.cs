@@ -8,10 +8,12 @@ public class GameManager : MonoBehaviour
     public enum GameState { Playing, Caught, LevelComplete, GameOver }
     public GameState currentState;
 
-    [Header("Timer")]
-    public float timeRemaining = 120f;
+    public GameObject winCanvas;
+    public GameObject loseCanvas;
+
     public TextMeshProUGUI timerText;
-    private bool timerRunning = false;
+    public float timeLimit = 120f;
+    private float currentTime;
 
     void Awake()
     {
@@ -24,40 +26,29 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         currentState = GameState.Playing;
-        timerRunning = true;
-        Debug.Log("Game started! State: " + currentState);
+        currentTime = timeLimit;
+        winCanvas.SetActive(false);
+        loseCanvas.SetActive(false);
     }
 
     void Update()
     {
-        if (timerRunning && currentState == GameState.Playing)
+        if (currentState == GameState.Playing)
         {
-            if (timeRemaining > 0)
-            {
-                timeRemaining -= Time.deltaTime;
-                UpdateTimerDisplay();
-            }
-            else
-            {
-                timeRemaining = 0;
-                timerRunning = false;
+            currentTime -= Time.deltaTime;
+            if (timerText != null)
+                timerText.text = "Night ends in: " + Mathf.CeilToInt(currentTime) + "s";
+            if (currentTime <= 0)
                 ChangeState(GameState.LevelComplete);
-            }
-        }
-    }
-
-    void UpdateTimerDisplay()
-    {
-        if (timerText != null)
-        {
-            int seconds = Mathf.CeilToInt(timeRemaining);
-            timerText.text = "Night ends in: " + seconds + "s";
         }
     }
 
     public void ChangeState(GameState newState)
     {
         currentState = newState;
-        Debug.Log("Game state changed to: " + currentState);
+        if (newState == GameState.LevelComplete)
+            winCanvas.SetActive(true);
+        if (newState == GameState.GameOver)
+            loseCanvas.SetActive(true);
     }
 }
