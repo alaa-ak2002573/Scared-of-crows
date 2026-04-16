@@ -99,11 +99,11 @@ public class CrowPatrol : MonoBehaviour
     }
     public void ResetToStart()
     {
-        transform.position = startPosition;
+        transform.position = startPosition;  // instant teleport, no path
         transform.rotation = startRotation;
         isChasing = false;
         isReturning = false;
         timer = 0;
-        currentDirection = transform.forward;
-    }
+        currentDirection = startRotation * Vector3.forward;
+    }  
 }
