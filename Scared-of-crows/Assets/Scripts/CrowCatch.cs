@@ -18,4 +18,14 @@ public class CrowCatch : MonoBehaviour
                 crowPatrol.ResetToStart();
         }
     }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CheckpointManager.instance.RespawnPlayer(other.gameObject);
+            if (crowPatrol != null)
+                crowPatrol.ResetToStart();
+        }
+    }
 }
