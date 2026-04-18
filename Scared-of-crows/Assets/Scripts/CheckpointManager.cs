@@ -18,6 +18,22 @@ public class CheckpointManager : MonoBehaviour
 
     public void RespawnPlayer(GameObject player)
     {
-        player.transform.position = lastCheckpoint;
+        // Stop all movement first
+        CharacterController cc = player.GetComponent<CharacterController>();
+        if (cc != null)
+        {
+            cc.enabled = false;          // disable before teleport
+            player.transform.position = lastCheckpoint;
+            cc.enabled = true;           // re-enable after
+        }
+        else
+        {
+            player.transform.position = lastCheckpoint;
+        }
+
+        // Also drop any carried vegetable on respawn
+        VegtablePickup carried = FindFirstObjectByType<VegtablePickup>();
+        if (carried != null && carried.IsCarried())
+            carried.Drop();
     }
 }
