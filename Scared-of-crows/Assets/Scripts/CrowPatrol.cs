@@ -3,12 +3,12 @@ using UnityEngine;
 public class CrowPatrol : MonoBehaviour
 {
     [Header("Patrol Settings")]
-    public float moveSpeed = 2f;
-    public float patrolTime = 3f;
+    private float moveSpeed = 8f;
+    private float patrolTime = 15f;
 
-    private float detectionRadius = 2f;
-    private float chaseSpeed = 4f;
-    private float returnSpeed = 3f;
+    private float detectionRadius = 15f;
+    private float chaseSpeed = 12f;
+    private float returnSpeed = 8f;
 
     private float timer;
     private Vector3 currentDirection;
