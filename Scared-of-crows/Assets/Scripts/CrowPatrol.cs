@@ -20,12 +20,18 @@ public class CrowPatrol : MonoBehaviour
     public bool IsChasing => isChasing;
     public float DetectionRadius => detectionRadius;
     public Transform Player => player;
+
+    // sound detection mechanic
+    [Header("Sound Detection")]
+    private float soundRadius = 70f;
+    private BellNoise bellNoise;
     void Start()
     {
         currentDirection = transform.forward;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         startPosition = transform.position;
         startRotation = transform.rotation;
+        bellNoise = player.GetComponent<BellNoise>();
     }
 
     void Update()
@@ -34,7 +40,10 @@ public class CrowPatrol : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (distanceToPlayer <= detectionRadius)
+        bool inVisualRange = distanceToPlayer <= detectionRadius;
+        bool inSoundRange = distanceToPlayer <= soundRadius && bellNoise != null && bellNoise.IsRinging;
+
+        if (inVisualRange || inSoundRange)
         {
             isChasing = true;
             isReturning = false;
@@ -46,17 +55,11 @@ public class CrowPatrol : MonoBehaviour
         }
 
         if (isChasing)
-        {
             Chase();
-        }
         else if (isReturning)
-        {
             ReturnToStart();
-        }
         else
-        {
             Patrol();
-        }
     }
 
     void Patrol()
@@ -74,9 +77,9 @@ public class CrowPatrol : MonoBehaviour
 
     void Chase()
     {
-    Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
-    transform.LookAt(targetPosition);
-    transform.Translate(Vector3.forward * chaseSpeed * Time.deltaTime);
+        Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
+        transform.LookAt(targetPosition);
+        transform.Translate(Vector3.forward * chaseSpeed * Time.deltaTime);
     }
 
     void ReturnToStart()
@@ -105,5 +108,5 @@ public class CrowPatrol : MonoBehaviour
         isReturning = false;
         timer = 0;
         currentDirection = startRotation * Vector3.forward;
-    }  
+    }
 }
