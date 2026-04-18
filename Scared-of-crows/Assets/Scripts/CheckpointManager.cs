@@ -32,7 +32,7 @@ public class CheckpointManager : MonoBehaviour
         }
 
         // Also drop any carried vegetable on respawn
-        VegtablePickup carried = FindFirstObjectByType<VegtablePickup>();
+        vegetablePickup carried = FindFirstObjectByType<vegetablePickup>();
         if (carried != null && carried.IsCarried())
             carried.Drop();
     }
