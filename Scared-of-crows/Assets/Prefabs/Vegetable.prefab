@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5582010856747947773}
   m_Layer: 0
   m_Name: Vegetable
-  m_TagString: Untagged
+  m_TagString: Vegtable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,3 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71daaa2dd8962444ae63652023ef061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VegtablePickup
+  onhand: {fileID: 0}
+  pickupRange: 1.5
+  throwForce: 15

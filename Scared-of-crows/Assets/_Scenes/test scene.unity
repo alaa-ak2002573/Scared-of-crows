@@ -214,6 +214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vegetable (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4983159088545106301, guid: eae9695943ad46147b3332d14c877f68, type: 3}
+      propertyPath: m_TagString
+      value: Vegtable
+      objectReference: {fileID: 0}
     - target: {fileID: 5582010856747947773, guid: eae9695943ad46147b3332d14c877f68, type: 3}
       propertyPath: onhand
       value: 
@@ -1455,6 +1459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vegetable (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4983159088545106301, guid: eae9695943ad46147b3332d14c877f68, type: 3}
+      propertyPath: m_TagString
+      value: Vegtable
+      objectReference: {fileID: 0}
     - target: {fileID: 5582010856747947773, guid: eae9695943ad46147b3332d14c877f68, type: 3}
       propertyPath: onhand
       value: 
@@ -2107,7 +2115,7 @@ PrefabInstance:
       addedObject: {fileID: 396437725}
     - targetCorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1450140916}
+      addedObject: {fileID: 1450140923}
   m_SourcePrefab: {fileID: 100100000, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
 --- !u!4 &1450140908 stripped
 Transform:
@@ -2119,7 +2127,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
   m_PrefabInstance: {fileID: 1450140907}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1450140916
+--- !u!54 &1450140923
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2209,6 +2217,10 @@ PrefabInstance:
     - target: {fileID: 4983159088545106301, guid: eae9695943ad46147b3332d14c877f68, type: 3}
       propertyPath: m_Name
       value: Vegetable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983159088545106301, guid: eae9695943ad46147b3332d14c877f68, type: 3}
+      propertyPath: m_TagString
+      value: Vegtable
       objectReference: {fileID: 0}
     - target: {fileID: 5582010856747947773, guid: eae9695943ad46147b3332d14c877f68, type: 3}
       propertyPath: onhand
@@ -3107,6 +3119,10 @@ PrefabInstance:
     - target: {fileID: 4983159088545106301, guid: eae9695943ad46147b3332d14c877f68, type: 3}
       propertyPath: m_Name
       value: Vegetable
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983159088545106301, guid: eae9695943ad46147b3332d14c877f68, type: 3}
+      propertyPath: m_TagString
+      value: Vegtable
       objectReference: {fileID: 0}
     - target: {fileID: 5582010856747947773, guid: eae9695943ad46147b3332d14c877f68, type: 3}
       propertyPath: onhand
