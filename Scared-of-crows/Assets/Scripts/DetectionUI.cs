@@ -17,6 +17,11 @@ public class DetectionUI : MonoBehaviour
             starterAssetsInputs = FindFirstObjectByType<StarterAssetsInputs>();
     }
 
+    public void SetHidden(bool value)
+    {
+        isHidden = value;
+    }
+
     private void Update()
     {
         bool anyCrowChasing = false;
@@ -46,7 +51,7 @@ public class DetectionUI : MonoBehaviour
             detectionText.text = "DETECTED!";
             detectionText.color = Color.red;
         }
-        else if (isHidden || !isMoving)
+        else if (isHidden)
         {
             detectionText.text = "Hidden";
             detectionText.color = Color.green;
