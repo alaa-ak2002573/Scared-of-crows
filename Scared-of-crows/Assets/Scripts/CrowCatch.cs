@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class CrowCatch : MonoBehaviour
 {
@@ -13,9 +14,9 @@ public class CrowCatch : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            CheckpointManager.instance.RespawnPlayer(other.gameObject);
             if (crowPatrol != null)
                 crowPatrol.ResetToStart();
+            StartCoroutine(CatchSequence(other.gameObject));
         }
     }
 
@@ -23,9 +24,16 @@ public class CrowCatch : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            CheckpointManager.instance.RespawnPlayer(other.gameObject);
             if (crowPatrol != null)
                 crowPatrol.ResetToStart();
+            StartCoroutine(CatchSequence(other.gameObject));
         }
+    }
+
+    IEnumerator CatchSequence(GameObject player)
+    {
+        GameManager.instance.ChangeState(GameManager.GameState.GameOver);
+        yield return new WaitForSeconds(1f);
+        CheckpointManager.instance.RespawnPlayer(player);
     }
 }

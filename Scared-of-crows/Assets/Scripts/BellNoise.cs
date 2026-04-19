@@ -5,13 +5,10 @@ using StarterAssets;
 public class BellNoise : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
-
-    [SerializeField] private float baseRunVolume = 0.2f;
-    [SerializeField] private float maxRunVolume = 0.025f;
+    [SerializeField] private float walkVolume = 0.3f;
+    [SerializeField] private float sprintVolume = 0.8f;
     [SerializeField] private float boostSpeed = 5f;
-
     private AudioSource bellAudio;
-
     public bool IsRinging { get; private set; }
 
     private void Awake()
@@ -23,7 +20,6 @@ public class BellNoise : MonoBehaviour
     {
         if (starterAssetsInputs == null)
             starterAssetsInputs = GetComponent<StarterAssetsInputs>();
-
         bellAudio.playOnAwake = false;
         bellAudio.loop = true;
         bellAudio.volume = 0f;
@@ -44,26 +40,32 @@ public class BellNoise : MonoBehaviour
             {
                 bellAudio.volume = Mathf.MoveTowards(
                     bellAudio.volume,
-                    maxRunVolume,
+                    sprintVolume,
                     boostSpeed * Time.deltaTime
                 );
-                IsRinging = true;
             }
             else
             {
                 bellAudio.volume = Mathf.MoveTowards(
                     bellAudio.volume,
-                    baseRunVolume * 0.05f,
+                    walkVolume,
                     boostSpeed * Time.deltaTime
                 );
-                IsRinging = false;
             }
+            IsRinging = true;
         }
         else
         {
-            if (bellAudio.isPlaying)
+            bellAudio.volume = Mathf.MoveTowards(
+                bellAudio.volume,
+                0f,
+                boostSpeed * Time.deltaTime
+            );
+            if (bellAudio.volume <= 0f)
+            {
                 bellAudio.Stop();
-            IsRinging = false;
+                IsRinging = false;
+            }
         }
     }
 }
