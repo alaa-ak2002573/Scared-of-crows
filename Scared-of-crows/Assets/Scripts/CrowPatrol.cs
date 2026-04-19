@@ -40,7 +40,7 @@ public class CrowPatrol : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        bool inVisualRange = distanceToPlayer <= detectionRadius;
+        bool inVisualRange = distanceToPlayer <= detectionRadius && CanSeePlayer();
         bool inSoundRange = distanceToPlayer <= soundRadius && bellNoise != null && bellNoise.IsRinging;
 
         if (inVisualRange || inSoundRange)
@@ -108,5 +108,17 @@ public class CrowPatrol : MonoBehaviour
         isReturning = false;
         timer = 0;
         currentDirection = startRotation * Vector3.forward;
+    }
+
+    bool CanSeePlayer()
+    {
+        Vector3 directionToPlayer = player.position - transform.position;
+        float distance = directionToPlayer.magnitude;
+
+        if (Physics.Raycast(transform.position, directionToPlayer.normalized, out RaycastHit hit, distance))
+        {
+            return hit.transform.CompareTag("Player");
+        }
+        return false;
     }
 }
