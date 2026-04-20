@@ -3,34 +3,41 @@ using UnityEngine;
 public class CrowPatrol : MonoBehaviour
 {
     [Header("Patrol Settings")]
-    public float moveSpeed = 30f;
+    public float moveSpeed = 45f;          // matches player walk
     public float patrolTime = 3f;
 
-    public float detectionRadius = 80f;
-    public float chaseSpeed = 40f;
-    public float returnSpeed = 30f;
+    [Header("Detection")]
+    public float visualRadius = 90f;       // sight
+    public float soundRadius = 140f;       // sprint hearing
+
+    [Header("Chase Speeds")]
+    public float chaseSpeed = 60f;     
+    public float returnSpeed = 45f;
 
     private float timer;
     private Vector3 currentDirection;
     private Transform player;
+
     private bool isChasing = false;
+    private bool isReturning = false;
+
     private Vector3 startPosition;
     private Quaternion startRotation;
-    private bool isReturning = false;
-    public bool IsChasing => isChasing;
-    public float DetectionRadius => detectionRadius;
-    public Transform Player => player;
 
-    // sound detection mechanic
-    [Header("Sound Detection")]
-    private float soundRadius = 150f;
     private BellNoise bellNoise;
+
+    public bool IsChasing => isChasing;
+    public Transform Player => player;
+    public float DetectionRadius => visualRadius;
+
     void Start()
     {
         currentDirection = transform.forward;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
         startPosition = transform.position;
         startRotation = transform.rotation;
+
         bellNoise = player.GetComponent<BellNoise>();
     }
 
@@ -38,11 +45,16 @@ public class CrowPatrol : MonoBehaviour
     {
         if (player == null) return;
 
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        float distance = Vector3.Distance(transform.position, player.position);
 
-        bool inVisualRange = distanceToPlayer <= detectionRadius;
-        bool inSoundRange = distanceToPlayer <= soundRadius && bellNoise != null && bellNoise.IsRinging;
+        // Visual detection
+        bool inVisualRange = distance <= visualRadius;
 
+        // Sound detection
+        bool isSprinting = bellNoise != null && bellNoise.IsRinging && bellNoise.GetComponent<AudioSource>().volume > 0.6f;
+        bool inSoundRange = distance <= soundRadius && isSprinting;
+
+        // Decide state
         if (inVisualRange || inSoundRange)
         {
             isChasing = true;
@@ -54,6 +66,7 @@ public class CrowPatrol : MonoBehaviour
             isReturning = true;
         }
 
+        // State behavior
         if (isChasing)
             Chase();
         else if (isReturning)
@@ -65,6 +78,7 @@ public class CrowPatrol : MonoBehaviour
     void Patrol()
     {
         timer += Time.deltaTime;
+
         transform.Translate(currentDirection * moveSpeed * Time.deltaTime, Space.World);
 
         if (timer >= patrolTime)
@@ -77,14 +91,16 @@ public class CrowPatrol : MonoBehaviour
 
     void Chase()
     {
-        Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
-        transform.LookAt(targetPosition);
+        Vector3 target = new Vector3(player.position.x, transform.position.y, player.position.z);
+
+        transform.LookAt(target);
         transform.Translate(Vector3.forward * chaseSpeed * Time.deltaTime);
     }
 
     void ReturnToStart()
     {
         transform.position = Vector3.MoveTowards(transform.position, startPosition, returnSpeed * Time.deltaTime);
+
         transform.rotation = Quaternion.Slerp(transform.rotation, startRotation, Time.deltaTime * returnSpeed);
 
         if (Vector3.Distance(transform.position, startPosition) < 0.1f)
@@ -97,18 +113,27 @@ public class CrowPatrol : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
+        // visual radius
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRadius);
+        Gizmos.DrawWireSphere(transform.position, visualRadius);
+
+        // sound radius
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, soundRadius);
     }
+
     public void ResetToStart()
     {
-        transform.position = startPosition;  // instant teleport, no path
+        transform.position = startPosition;
         transform.rotation = startRotation;
+
         isChasing = false;
         isReturning = false;
+
         timer = 0;
         currentDirection = startRotation * Vector3.forward;
     }
+}
 
     // bool CanSeePlayer()
     // {
@@ -124,4 +149,3 @@ public class CrowPatrol : MonoBehaviour
     //     }
     //     return true; // if nothing blocks the ray, player is visible
     // }
-}
