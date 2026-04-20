@@ -3,12 +3,12 @@ using UnityEngine;
 public class CrowPatrol : MonoBehaviour
 {
     [Header("Patrol Settings")]
-    public float moveSpeed = 2f;
+    public float moveSpeed = 30f;
     public float patrolTime = 3f;
 
-    public float detectionRadius = 2f;
-    public float chaseSpeed = 4f;
-    public float returnSpeed = 3f;
+    public float detectionRadius = 80f;
+    public float chaseSpeed = 40f;
+    public float returnSpeed = 30f;
 
     private float timer;
     private Vector3 currentDirection;
@@ -23,7 +23,7 @@ public class CrowPatrol : MonoBehaviour
 
     // sound detection mechanic
     [Header("Sound Detection")]
-    private float soundRadius = 70f;
+    private float soundRadius = 150f;
     private BellNoise bellNoise;
     void Start()
     {
@@ -40,7 +40,7 @@ public class CrowPatrol : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        bool inVisualRange = distanceToPlayer <= detectionRadius && CanSeePlayer();
+        bool inVisualRange = distanceToPlayer <= detectionRadius;
         bool inSoundRange = distanceToPlayer <= soundRadius && bellNoise != null && bellNoise.IsRinging;
 
         if (inVisualRange || inSoundRange)
@@ -110,15 +110,18 @@ public class CrowPatrol : MonoBehaviour
         currentDirection = startRotation * Vector3.forward;
     }
 
-    bool CanSeePlayer()
-    {
-        Vector3 directionToPlayer = player.position - transform.position;
-        float distance = directionToPlayer.magnitude;
+    // bool CanSeePlayer()
+    // {
+    //     Vector3 directionToPlayer = player.position - transform.position;
+    //     float distance = directionToPlayer.magnitude;
 
-        if (Physics.Raycast(transform.position, directionToPlayer.normalized, out RaycastHit hit, distance))
-        {
-            return hit.transform.CompareTag("Player");
-        }
-        return false;
-    }
+    //     RaycastHit hit;
+    //     if (Physics.Raycast(transform.position, directionToPlayer.normalized, out hit, distance))
+    //     {
+    //         if (hit.transform.CompareTag("Player") || hit.transform.root.CompareTag("Player"))
+    //             return true;
+    //         return false;
+    //     }
+    //     return true; // if nothing blocks the ray, player is visible
+    // }
 }
