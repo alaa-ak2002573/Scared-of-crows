@@ -3411,8 +3411,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 60.3
+  m_fontSizeBase: 60.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3478,11 +3478,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1642496010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -556.6}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 31.94}
   m_SizeDelta: {x: 300, y: 50}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!1001 &422107698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5620,6 +5620,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &590116213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61093996081688117, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
+  m_PrefabInstance: {fileID: 590116208}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590116209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236c2915e98a4eaa887d219f828c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowPatrol
 --- !u!1001 &604103969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6287,6 +6298,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &641163950 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61093996081688117, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
+  m_PrefabInstance: {fileID: 641163945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641163946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236c2915e98a4eaa887d219f828c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowPatrol
 --- !u!1001 &649039206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8942,6 +8964,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &899452809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61093996081688117, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
+  m_PrefabInstance: {fileID: 899452804}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899452805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236c2915e98a4eaa887d219f828c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowPatrol
 --- !u!1001 &926108543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9172,6 +9205,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &930249541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61093996081688117, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
+  m_PrefabInstance: {fileID: 930249536}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930249537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236c2915e98a4eaa887d219f828c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowPatrol
 --- !u!1 &940101222 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 229827458048600183, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
@@ -9204,6 +9248,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &940101231 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61093996081688117, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
+  m_PrefabInstance: {fileID: 718826658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940101222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236c2915e98a4eaa887d219f828c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowPatrol
 --- !u!1001 &955675602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9608,6 +9663,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &984148743 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61093996081688117, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
+  m_PrefabInstance: {fileID: 984148738}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984148739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236c2915e98a4eaa887d219f828c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowPatrol
 --- !u!1001 &1006511094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13290,6 +13356,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1376306168 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61093996081688117, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
+  m_PrefabInstance: {fileID: 1376306163}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376306164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236c2915e98a4eaa887d219f828c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowPatrol
 --- !u!1 &1394108675 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 578bc15176765594b867855c67cc20d7, type: 3}
@@ -15978,9 +16055,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectionUI
   detectionText: {fileID: 416668821}
   bellNoise: {fileID: 868791645}
-  crows: []
+  crows:
+  - {fileID: 940101231}
+  - {fileID: 590116213}
+  - {fileID: 1376306168}
+  - {fileID: 641163950}
+  - {fileID: 984148743}
+  - {fileID: 930249541}
+  - {fileID: 1715681448}
+  - {fileID: 1984720563}
+  - {fileID: 1822177666}
+  - {fileID: 899452809}
   starterAssetsInputs: {fileID: 1413777877}
   isHidden: 0
+  safeDisplayDuration: 2
 --- !u!114 &1642496007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16558,6 +16646,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1715681448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61093996081688117, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
+  m_PrefabInstance: {fileID: 1715681443}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715681444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236c2915e98a4eaa887d219f828c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowPatrol
 --- !u!1 &1727267344
 GameObject:
   m_ObjectHideFlags: 0
@@ -17422,6 +17521,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1822177666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61093996081688117, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
+  m_PrefabInstance: {fileID: 1822177661}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822177662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236c2915e98a4eaa887d219f828c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowPatrol
 --- !u!1 &1822295878 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
@@ -19063,6 +19173,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1984720563 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 61093996081688117, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
+  m_PrefabInstance: {fileID: 1984720558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984720559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236c2915e98a4eaa887d219f828c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowPatrol
 --- !u!1001 &1986327868
 PrefabInstance:
   m_ObjectHideFlags: 0

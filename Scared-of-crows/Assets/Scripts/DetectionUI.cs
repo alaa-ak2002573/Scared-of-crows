@@ -11,6 +11,10 @@ public class DetectionUI : MonoBehaviour
 
     public bool isHidden = false;
 
+    [SerializeField] private float safeDisplayDuration = 2f;
+    private float safeTimer = 0f;
+    private bool wasBeingChased = false;
+
     private void Start()
     {
         if (starterAssetsInputs == null)
@@ -46,6 +50,18 @@ public class DetectionUI : MonoBehaviour
             }
         }
 
+        if (wasBeingChased && !anyCrowChasing)
+        {
+            safeTimer = safeDisplayDuration;
+        }
+
+        wasBeingChased = anyCrowChasing;
+
+        if (safeTimer > 0f)
+        {
+            safeTimer -= Time.deltaTime;
+        }
+
         if (anyCrowChasing)
         {
             detectionText.text = "DETECTED!";
@@ -55,6 +71,11 @@ public class DetectionUI : MonoBehaviour
         {
             detectionText.text = "Hidden";
             detectionText.color = Color.green;
+        }
+        else if (safeTimer > 0f)
+        {
+            detectionText.text = "Escaped";
+            detectionText.color = Color.cyan;
         }
         else if (isRunning || nearCrow)
         {
