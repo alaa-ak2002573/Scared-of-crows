@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 public class vegetablePickup : MonoBehaviour
 {
     public Transform onhand;
-    public float pickupRange = 2f;
-    public float throwForce = 15f;
+    public float pickupRange = 3f;
+    public float throwForce = 25f;
 
     private bool isCarried = false;
     private Rigidbody rb;
@@ -14,6 +14,8 @@ public class vegetablePickup : MonoBehaviour
 
     private InputAction pickAction;
     private InputAction throwAction;
+
+    private static vegetablePickup currentlyCarried = null;
 
     void Awake()
     {
@@ -32,8 +34,8 @@ public class vegetablePickup : MonoBehaviour
 
     void Update()
     {
-        // pick up
-        if (pickAction.triggered && !isCarried && player != null)
+        if (pickAction.triggered && !isCarried
+            && player != null && currentlyCarried == null)
         {
             float distance = Vector3.Distance(transform.position, player.position);
             if (distance <= pickupRange)
@@ -42,7 +44,6 @@ public class vegetablePickup : MonoBehaviour
             }
         }
 
-        // throw
         if (throwAction.triggered && isCarried)
         {
             Throw();
@@ -52,6 +53,7 @@ public class vegetablePickup : MonoBehaviour
     void PickUp()
     {
         isCarried = true;
+        currentlyCarried = this;
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.isKinematic = true;
@@ -59,23 +61,17 @@ public class vegetablePickup : MonoBehaviour
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
     }
-
     void Throw()
     {
         isCarried = false;
+        currentlyCarried = null;
         transform.SetParent(null);
         rb.isKinematic = false;
         rb.useGravity = true;
 
-        Ray ray = mainCam.ScreenPointToRay(
-            Mouse.current.position.ReadValue()
-        );
-
-        Vector3 throwDirection;
-        if (Physics.Raycast(ray, out RaycastHit hit))
-            throwDirection = (hit.point - transform.position).normalized;
-        else
-            throwDirection = mainCam.transform.forward;
+        // use player forward + upward angle instead of camera
+        Vector3 throwDirection = player.forward + Vector3.up * 0.5f;
+        throwDirection.Normalize();
 
         rb.linearVelocity = throwDirection * throwForce;
     }
@@ -83,6 +79,7 @@ public class vegetablePickup : MonoBehaviour
     public void Drop()
     {
         isCarried = false;
+        currentlyCarried = null;
         transform.SetParent(null);
         rb.isKinematic = false;
         rb.useGravity = true;
@@ -90,6 +87,7 @@ public class vegetablePickup : MonoBehaviour
 
     void OnDestroy()
     {
+        if (currentlyCarried == this) currentlyCarried = null;
         pickAction.Dispose();
         throwAction.Dispose();
     }
