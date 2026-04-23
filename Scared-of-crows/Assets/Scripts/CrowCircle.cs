@@ -3,7 +3,7 @@ using UnityEngine;
 public class CrowCircle : MonoBehaviour
 {
     [Header("Circle Settings")]
-    private float radius = 20f;
+    private float radius = 30f;
     private float speed = 30f;
     private float height = 50f;
 

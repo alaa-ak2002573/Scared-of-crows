@@ -276,15 +276,15 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e41d45e167b714355b79ffddc7ba34f3, type: 2}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -569,15 +569,15 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e41d45e167b714355b79ffddc7ba34f3, type: 2}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -648,9 +648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7e5f0d6ab3a4a23908542717d97b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrowCircle
-  radius: 20
-  speed: 40
-  height: 40
   startAngle: 120
 --- !u!1001 &118996248
 PrefabInstance:
@@ -3854,15 +3851,15 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e41d45e167b714355b79ffddc7ba34f3, type: 2}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3933,9 +3930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7e5f0d6ab3a4a23908542717d97b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrowCircle
-  radius: 20
-  speed: 40
-  height: 40
   startAngle: 240
 --- !u!4 &845675262 stripped
 Transform:
@@ -9458,9 +9452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7e5f0d6ab3a4a23908542717d97b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrowCircle
-  radius: 20
-  speed: 40
-  height: 40
   startAngle: 0
 --- !u!1001 &1549298842131903965
 PrefabInstance:
