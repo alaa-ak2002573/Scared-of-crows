@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public float timeLimit = 120f;
     private float currentTime;
 
+    public AudioSource victorySound;
+    public AudioSource lossSound;
+
     void Awake()
     {
         if (instance == null)
@@ -68,6 +71,8 @@ public class GameManager : MonoBehaviour
         {
             winCanvas.SetActive(true);
             timerCanvas.SetActive(false);
+            if (victorySound != null)
+                victorySound.Play();
         }
 
         if (newState == GameState.GameOver)
@@ -75,6 +80,8 @@ public class GameManager : MonoBehaviour
             loseCanvas.SetActive(true);
             timerCanvas.SetActive(false);
             FadeManager.instance.FadeToBlack();
+            if (lossSound != null)
+                lossSound.Play();
         }
     }
 
