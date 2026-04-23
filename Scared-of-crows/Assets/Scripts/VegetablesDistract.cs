@@ -11,7 +11,7 @@ public class VegetablesDistract : MonoBehaviour
             DistractCrow(collision.gameObject);
         }
 
-        // when it lands anywhere, distract nearest crow
+        // when it lands anywhere, distract nearest crow 
         DistractNearestCrow();
     }
 

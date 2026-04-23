@@ -5,7 +5,7 @@ public class vegetablePickup : MonoBehaviour
 {
     public Transform onhand;
     public float pickupRange = 3f;
-    public float throwForce = 25f;
+    public float throwForce = 25f; 
 
     private bool isCarried = false;
     private Rigidbody rb;
@@ -13,16 +13,16 @@ public class vegetablePickup : MonoBehaviour
     private Camera mainCam;
 
     private InputAction pickAction;
-    private InputAction throwAction;
+    private InputAction dropAction;
 
     private static vegetablePickup currentlyCarried = null;
 
     void Awake()
     {
         pickAction = new InputAction(type: InputActionType.Button, binding: "<Keyboard>/f");
-        throwAction = new InputAction(type: InputActionType.Button, binding: "<Mouse>/leftButton");
+        dropAction = new InputAction(type: InputActionType.Button, binding: "<Keyboard>/e");
         pickAction.Enable();
-        throwAction.Enable();
+        dropAction.Enable();
     }
 
     void Start()
@@ -44,9 +44,9 @@ public class vegetablePickup : MonoBehaviour
             }
         }
 
-        if (throwAction.triggered && isCarried)
+        if (dropAction.triggered && isCarried)
         {
-            Throw();
+            Drop();
         }
     }
 
@@ -60,20 +60,6 @@ public class vegetablePickup : MonoBehaviour
         transform.SetParent(onhand);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
-    }
-    void Throw()
-    {
-        isCarried = false;
-        currentlyCarried = null;
-        transform.SetParent(null);
-        rb.isKinematic = false;
-        rb.useGravity = true;
-
-        // use player forward + upward angle instead of camera
-        Vector3 throwDirection = player.forward + Vector3.up * 0.5f;
-        throwDirection.Normalize();
-
-        rb.linearVelocity = throwDirection * throwForce;
     }
 
     public void Drop()
@@ -89,7 +75,7 @@ public class vegetablePickup : MonoBehaviour
     {
         if (currentlyCarried == this) currentlyCarried = null;
         pickAction.Dispose();
-        throwAction.Dispose();
+        dropAction.Dispose();
     }
 
     public bool IsCarried() { return isCarried; }
