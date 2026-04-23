@@ -288,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 140.4
+      value: 149.38197
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -296,7 +296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 199.4
+      value: 199.96918
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -329,6 +329,10 @@ PrefabInstance:
     - target: {fileID: 4571267525931020397, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_Name
       value: crowL3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571267525931020397, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
+      propertyPath: m_TagString
+      value: Crow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -581,7 +585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 140.4
+      value: 149.38197
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -589,7 +593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 199.4
+      value: 199.96918
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -622,6 +626,10 @@ PrefabInstance:
     - target: {fileID: 4571267525931020397, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_Name
       value: crowL3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571267525931020397, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
+      propertyPath: m_TagString
+      value: Crow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3863,7 +3871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 140.4
+      value: 149.38197
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3871,7 +3879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 199.4
+      value: 199.96918
       objectReference: {fileID: 0}
     - target: {fileID: 3763803351772687063, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3904,6 +3912,10 @@ PrefabInstance:
     - target: {fileID: 4571267525931020397, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
       propertyPath: m_Name
       value: crowL3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571267525931020397, guid: aee9821a0d9d04c4189e41fbcc6e35ae, type: 3}
+      propertyPath: m_TagString
+      value: Crow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
