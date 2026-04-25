@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2174918930066250085}
   m_Layer: 0
   m_Name: Carrot
-  m_TagString: Vegtable
+  m_TagString: 'Vegetable '
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,4 +191,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::vegetablePickup
   onhand: {fileID: 0}
   pickupRange: 1
-  throwForce: 15
+  throwForce: 90

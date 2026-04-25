@@ -5,7 +5,7 @@ public class vegetablePickup : MonoBehaviour
 {
     public Transform onhand;
     public float pickupRange = 3f;
-    public float throwForce = 25f; 
+    public float throwForce = 60f; 
 
     private bool isCarried = false;
     private Rigidbody rb;

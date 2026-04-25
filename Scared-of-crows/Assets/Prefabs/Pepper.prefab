@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1999868544333114901}
   m_Layer: 0
   m_Name: Pepper
-  m_TagString: Vegtable
+  m_TagString: 'Vegetable '
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,4 +169,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::vegetablePickup
   onhand: {fileID: 0}
   pickupRange: 1
-  throwForce: 15
+  throwForce: 90

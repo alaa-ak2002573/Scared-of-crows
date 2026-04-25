@@ -1,39 +1,35 @@
 using UnityEngine;
 
-public class DeliveryZone : MonoBehaviour
+public class Deliveryzone : MonoBehaviour
 {
     private int vegetableCount = 0;
+    private bool levelComplete = false;
 
     void OnTriggerEnter(Collider other)
     {
+        if (levelComplete) return;
+
         if (other.CompareTag("Player"))
         {
-            vegetablePickup carried = FindFirstObjectByType<vegetablePickup>();
-            if (carried != null && carried.IsCarried())
+            vegetablePickup[] allVegs = FindObjectsByType<vegetablePickup>(FindObjectsSortMode.None);
+
+            foreach (vegetablePickup veg in allVegs)
             {
-                carried.Drop();
-                CountDelivery();
+                if (veg.IsCarried())
+                {
+                    veg.Drop();
+                    vegetableCount++;
+                    Debug.Log("Vegetables delivered: " + vegetableCount);
+
+                    if (vegetableCount >= 3)
+                    {
+                        levelComplete = true;
+                        GameManager.instance.ChangeState(GameManager.GameState.LevelComplete);
+                    }
+
+                    return;
+                }
             }
-        }
-
-        if (other.CompareTag("Vegetable"))
-        {
-            vegetablePickup veg = other.GetComponent<vegetablePickup>();
-            if (veg != null && !veg.IsCarried())
-            {
-                CountDelivery();
-            }
-        }
-    }
-
-    void CountDelivery()
-    {
-        vegetableCount++;
-        Debug.Log("Vegetables delivered: " + vegetableCount);
-
-        if (vegetableCount >= 3)
-        {
-            GameManager.instance.ChangeState(GameManager.GameState.LevelComplete);
         }
     }
 }
