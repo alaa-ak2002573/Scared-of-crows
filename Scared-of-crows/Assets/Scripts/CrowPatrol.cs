@@ -3,7 +3,7 @@ using UnityEngine;
 public class CrowPatrol : MonoBehaviour
 {
     [Header("Patrol Settings")]
-    public float moveSpeed = 45f;          // matches player walk
+    public float moveSpeed = 50f;          // matches player walk
     public float patrolTime = 3f;
 
     [Header("Detection")]
