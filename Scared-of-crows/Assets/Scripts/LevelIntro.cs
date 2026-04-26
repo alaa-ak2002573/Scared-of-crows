@@ -12,13 +12,9 @@ public class LevelIntro : MonoBehaviour
     public float typingSpeed = 0.05f;
     public float displayDuration = 3f;
 
-    private string[] slides = new string[]
-    {
-        "Digby: Pike. Get up. The farm needs guarding ... now.",
-        "Digby: You see those crows? Chase them off. That's literally your only job.",
-        "Digby: And keep it down! Crows hear everything. Don't go stomping around.",
-        "Digby: I'm going to sleep. Don't mess this up."
-    };
+    [Header("Dialogue")]
+    [TextArea(2, 5)]
+    public string[] slides;
 
     void Start()
     {
