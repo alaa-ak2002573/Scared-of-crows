@@ -95,6 +95,10 @@ public class GameManager : MonoBehaviour
     {
         FadeManager.instance.FadeToBlack();
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextScene < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(nextScene);
+        else
+            SceneManager.LoadScene(0);
     }
 }
