@@ -20316,8 +20316,8 @@ MonoBehaviour:
   - 'Digby: Pike! What did you do all night?! The crops are still scattered everywhere!'
   - 'Digby: You can''t even do the one thing I asked. Unbelievable.'
   - 'Digby: Fine. YOU collect the crops. Every. Single. One.'
-  - "Digby: And don't make noise while carrying them \u2014 crows will hear you from
-    a mile away."
+  - 'Digby: And don''t make noise while carrying them ... crows will hear you from
+    a mile away.'
 --- !u!4 &1846989699
 Transform:
   m_ObjectHideFlags: 0

@@ -16,6 +16,9 @@ public class LevelIntro : MonoBehaviour
     [TextArea(2, 5)]
     public string[] slides;
 
+    [Header("Audio")]
+    public AudioSource levelMusic;
+
     void Start()
     {
         Time.timeScale = 0f;
@@ -40,5 +43,8 @@ public class LevelIntro : MonoBehaviour
 
         introCanvas.SetActive(false);
         Time.timeScale = 1f;
+
+        if (levelMusic != null)
+            levelMusic.Play();
     }
 }
