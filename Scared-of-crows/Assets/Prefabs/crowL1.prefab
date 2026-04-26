@@ -136,6 +136,7 @@ MonoBehaviour:
   soundRadius: 140
   chaseSpeed: 15
   returnSpeed: 20
+  crowAlert: {fileID: 8300000, guid: fc217c250053cc547809af70926cd753, type: 3}
 --- !u!65 &874455190256309045
 BoxCollider:
   m_ObjectHideFlags: 0
