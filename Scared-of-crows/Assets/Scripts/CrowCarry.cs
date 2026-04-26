@@ -28,7 +28,7 @@ public class CrowCarry : MonoBehaviour
 
         // Keep object position between the 3 crows
         Vector3 center = (crow1.transform.position + crow2.transform.position + crow3.transform.position) / 3f;
-        carriedObject.transform.position = center;
+        carriedObject.transform.position = center + Vector3.down * 5f;
     }
 
     void Release()
