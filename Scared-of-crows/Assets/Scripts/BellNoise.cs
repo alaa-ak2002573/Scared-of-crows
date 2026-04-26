@@ -5,7 +5,7 @@ using StarterAssets;
 public class BellNoise : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputs starterAssetsInputs;
-    [SerializeField] private float walkVolume = 0.3f;
+    [SerializeField] private float walkVolume = 0.15f;
     [SerializeField] private float sprintVolume = 0.8f;
     [SerializeField] private float boostSpeed = 5f;
     private AudioSource bellAudio;
