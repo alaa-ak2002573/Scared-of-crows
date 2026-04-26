@@ -26,6 +26,10 @@ public class CrowPatrol : MonoBehaviour
 
     private BellNoise bellNoise;
 
+    [Header("Audio")]
+    public AudioClip crowAlert;
+    private AudioSource audioSource;
+
     public bool IsChasing => isChasing;
     public Transform Player => player;
     public float DetectionRadius => visualRadius;
@@ -39,6 +43,7 @@ public class CrowPatrol : MonoBehaviour
         startRotation = transform.rotation;
 
         bellNoise = player.GetComponent<BellNoise>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -57,6 +62,8 @@ public class CrowPatrol : MonoBehaviour
         // Decide state
         if (inVisualRange || inSoundRange)
         {
+            if (!isChasing)
+                audioSource.PlayOneShot(crowAlert);
             isChasing = true;
             isReturning = false;
         }
@@ -73,6 +80,7 @@ public class CrowPatrol : MonoBehaviour
             ReturnToStart();
         else
             Patrol();
+
     }
 
     void Patrol()
@@ -105,6 +113,7 @@ public class CrowPatrol : MonoBehaviour
 
         if (Vector3.Distance(transform.position, startPosition) < 0.1f)
         {
+            audioSource.PlayOneShot(crowAlert);
             isReturning = false;
             timer = 0;
             currentDirection = transform.forward;
