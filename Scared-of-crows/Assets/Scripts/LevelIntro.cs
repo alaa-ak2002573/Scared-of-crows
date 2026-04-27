@@ -18,6 +18,7 @@ public class LevelIntro : MonoBehaviour
 
     [Header("Audio")]
     public AudioSource levelMusic;
+    public AudioSource typingAudio;
 
     void Start()
     {
@@ -32,11 +33,17 @@ public class LevelIntro : MonoBehaviour
         {
             dialogueText.text = "";
 
+            if (typingAudio != null)
+                typingAudio.Play();
+
             foreach (char c in slide)
             {
                 dialogueText.text += c;
                 yield return new WaitForSecondsRealtime(typingSpeed);
             }
+
+            if (typingAudio != null)
+                typingAudio.Stop();
 
             yield return new WaitForSecondsRealtime(displayDuration);
         }

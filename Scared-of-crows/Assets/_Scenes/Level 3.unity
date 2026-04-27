@@ -3416,7 +3416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb8410ab66a9354298df181143c9e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VegetableInventory
-  vegetableThrowablePrefab: {fileID: 3515086747761935698, guid: 4e5ce65073b83ca4dba1af3afbea4307, type: 3}
+  vegetableThrowablePrefab: {fileID: 3515086747761935698, guid: 13b5d53a2caf840189f6da6ac445b291, type: 3}
   onhand: {fileID: 1545455506}
   startingVegetables: 3
   throwForce: 280
