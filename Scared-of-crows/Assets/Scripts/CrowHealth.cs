@@ -32,8 +32,11 @@ public class CrowHealth : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Vegetable") && !isDead)
+        Debug.Log("HIT BY: " + other.gameObject.name + " | Tag: " + other.tag + " | isDead: " + isDead);
+
+        if (other.tag.Trim() == "Vegetable" && !isDead)
         {
+            Debug.Log("CALLING DIE!");
             Die();
         }
     }

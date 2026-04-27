@@ -34,7 +34,9 @@ public class LevelIntro : MonoBehaviour
             dialogueText.text = "";
 
             if (typingAudio != null)
+            {
                 typingAudio.Play();
+            }
 
             foreach (char c in slide)
             {
