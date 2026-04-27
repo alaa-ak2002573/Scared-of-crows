@@ -56,9 +56,9 @@ public class CrowHealth : MonoBehaviour
 
     IEnumerator FlyAway()
     {
+        Debug.Log("FlyAway started!");
         float duration = 2f;
         float elapsed = 0f;
-        Vector3 startPos = transform.position;
         Vector3 flyDirection = (transform.forward + Vector3.up * 2f).normalized;
 
         while (elapsed < duration)
@@ -68,6 +68,7 @@ public class CrowHealth : MonoBehaviour
             yield return null;
         }
 
+        Debug.Log("FlyAway done!");
         gameObject.SetActive(false);
     }
 }
