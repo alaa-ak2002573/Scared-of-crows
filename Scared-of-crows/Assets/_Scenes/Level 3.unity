@@ -3419,7 +3419,7 @@ MonoBehaviour:
   vegetableThrowablePrefab: {fileID: 3515086747761935698, guid: 4e5ce65073b83ca4dba1af3afbea4307, type: 3}
   onhand: {fileID: 1545455506}
   startingVegetables: 3
-  throwForce: 260
+  throwForce: 280
 --- !u!1 &609850613
 GameObject:
   m_ObjectHideFlags: 0

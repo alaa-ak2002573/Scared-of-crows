@@ -10,13 +10,14 @@ public class VegetableInventory : MonoBehaviour
 
     private int count;
     private InputAction throwAction;
-    private GameObject currentVisual; // vegetable shown in hand
+    private GameObject currentVisual;
+    private Camera mainCam;
 
     void Awake()
     {
         throwAction = new InputAction(
             type: InputActionType.Button,
-            binding: "<Mouse>/leftButton" 
+            binding: "<Mouse>/leftButton"
         );
         throwAction.performed += _ => ThrowVegetable();
         throwAction.Enable();
@@ -25,23 +26,28 @@ public class VegetableInventory : MonoBehaviour
     void Start()
     {
         count = startingVegetables;
+        mainCam = Camera.main;
         ShowVegetableInHand();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    void Update()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void ShowVegetableInHand()
     {
         if (count <= 0) return;
 
-        // spawn visual vegetable in hand — frozen, not throwable yet
         currentVisual = Instantiate(vegetableThrowablePrefab,
             onhand.position, onhand.rotation);
-
-        // parent to hand so it follows Pike
         currentVisual.transform.SetParent(onhand);
         currentVisual.transform.localPosition = Vector3.zero;
         currentVisual.transform.localRotation = Quaternion.identity;
 
-        // freeze physics while held
         Rigidbody rb = currentVisual.GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -52,38 +58,41 @@ public class VegetableInventory : MonoBehaviour
 
     void ThrowVegetable()
     {
-        if (count <= 0)
-        {
-            Debug.Log("No vegetables left!");
-            return;
-        }
+        if (count <= 0) return;
 
-        // detach current visual and throw it
         if (currentVisual != null)
         {
             currentVisual.transform.SetParent(null);
+
+            currentVisual.transform.position = mainCam.transform.position;
 
             Rigidbody rb = currentVisual.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.isKinematic = false;
                 rb.useGravity = true;
-                Vector3 throwDir = transform.forward + Vector3.up * 0.3f;
-                throwDir.Normalize();
+
+                Ray ray = mainCam.ScreenPointToRay(
+                    Mouse.current.position.ReadValue()
+                );
+
+                Vector3 throwDir;
+                if (Physics.Raycast(ray, out RaycastHit hit, 200f))
+                {
+                    throwDir = (hit.point - currentVisual.transform.position).normalized;
+                }
+                else
+                {
+                    throwDir = ray.direction.normalized;
+                }
+
                 rb.linearVelocity = throwDir * throwForce;
             }
-
             currentVisual = null;
         }
 
         count--;
-        Debug.Log("Vegetables left: " + count);
-
-        // show next vegetable in hand
-        if (count > 0)
-        {
-            ShowVegetableInHand();
-        }
+        if (count > 0) ShowVegetableInHand();
     }
 
     void OnDestroy()

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4070150719585841398}
   - component: {fileID: 6487294877255393607}
   - component: {fileID: 1177338461937534}
+  - component: {fileID: 2123740701640817263}
   m_Layer: 0
   m_Name: VegetableThrowable
   m_TagString: 'Vegetable '
@@ -176,3 +177,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94e775ff71d0e84fa1d018eff3a9972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VegetablesDistract
+--- !u!114 &2123740701640817263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3515086747761935698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71daaa2dd8962444ae63652023ef061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::vegetablePickup
+  onhand: {fileID: 0}
+  pickupRange: 3
+  throwForce: 60
