@@ -32,11 +32,17 @@ public class CrowHealth : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("HIT BY: " + other.gameObject.name + " | Tag: " + other.tag + " | isDead: " + isDead);
-
         if (other.tag.Trim() == "Vegetable" && !isDead)
         {
-            Debug.Log("CALLING DIE!");
+            // Stop the vegetable and let gravity drop it
+            Rigidbody vegRb = other.GetComponent<Rigidbody>();
+            if (vegRb != null)
+            {
+                vegRb.linearVelocity = new Vector3(0f, 3f, 0f);
+                vegRb.useGravity = true;
+                vegRb.isKinematic = false;
+            }
+
             Die();
         }
     }
