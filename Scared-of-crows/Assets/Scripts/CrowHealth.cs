@@ -10,12 +10,15 @@ public class CrowHealth : MonoBehaviour
     private bool isDead = false;
     private CrowPatrol crowPatrol;
     private CrowCatch crowCatch;
+    private CrowCircle crowCircle;
+
     public bool IsDead => isDead;
 
     void Start()
     {
         crowPatrol = GetComponent<CrowPatrol>();
         crowCatch = GetComponent<CrowCatch>();
+        crowCircle = GetComponent<CrowCircle>();
     }
 
     void Update()
@@ -53,13 +56,12 @@ public class CrowHealth : MonoBehaviour
 
         if (crowPatrol != null)
             crowPatrol.enabled = false;
-
         if (crowCatch != null)
             crowCatch.enabled = false;
+        if (crowCircle != null)
+            crowCircle.enabled = false;
 
         GetComponent<BoxCollider>().enabled = false;
-
-        // Fly away
         StartCoroutine(FlyAway());
     }
 
