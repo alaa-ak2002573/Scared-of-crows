@@ -13,6 +13,5 @@ public class WinCondition : MonoBehaviour
         }
 
         winCanvas.SetActive(true);
-        Time.timeScale = 0f;
     }
 }
