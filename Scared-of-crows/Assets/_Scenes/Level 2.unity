@@ -3084,7 +3084,6 @@ GameObject:
   - component: {fileID: 314128096}
   - component: {fileID: 314128095}
   - component: {fileID: 314128094}
-  - component: {fileID: 314128093}
   - component: {fileID: 314128092}
   - component: {fileID: 314128090}
   m_Layer: 0
@@ -3124,34 +3123,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 1.4651946
   m_Center: {x: 0.00000023841858, y: 0, z: 0}
---- !u!64 &314128093
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314128089}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4970989848755135003, guid: 42553c149189b6e4da2765ce5484d9be, type: 3}
 --- !u!54 &314128094
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3175,10 +3152,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!23 &314128095
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3561,7 +3538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 34.775
+      value: 47.875
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3605,11 +3582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7503789752653696388, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: ShoulderOffset.y
-      value: 2.2
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 7503789752653696388, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: VerticalArmLength
-      value: 1.2
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5100,8 +5077,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.28
-  m_Center: {x: -0.000000059604645, y: 0, z: 0.00000035762787}
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &479630755
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5125,10 +5102,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!23 &479630756
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8085,8 +8062,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.04
-  m_Center: {x: 0, y: 0, z: 0.00000047683716}
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &678134828
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8110,10 +8087,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!23 &678134829
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12715,8 +12692,8 @@ GameObject:
   - component: {fileID: 1098204353}
   - component: {fileID: 1098204352}
   - component: {fileID: 1098204351}
-  - component: {fileID: 1098204350}
   - component: {fileID: 1098204348}
+  - component: {fileID: 1098204355}
   m_Layer: 0
   m_Name: Pepper 2
   m_TagString: 'Vegetable '
@@ -12739,28 +12716,6 @@ MonoBehaviour:
   onhand: {fileID: 14738244}
   pickupRange: 10
   throwForce: 0
---- !u!64 &1098204350
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098204347}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6187883067242612374, guid: d27021cd19462844c9401ba927e7e80d, type: 3}
 --- !u!54 &1098204351
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12784,10 +12739,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!23 &1098204352
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12860,6 +12815,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1098204355
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098204347}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1102331167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13684,6 +13660,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 272155314723711542, guid: 90c85fc05ef094e4dbf2fa0189dbb7eb, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 272155314723711542, guid: 90c85fc05ef094e4dbf2fa0189dbb7eb, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 571328413247370679, guid: 90c85fc05ef094e4dbf2fa0189dbb7eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 241.22162
@@ -13727,6 +13711,18 @@ PrefabInstance:
     - target: {fileID: 4504717273005476602, guid: 90c85fc05ef094e4dbf2fa0189dbb7eb, type: 3}
       propertyPath: m_Name
       value: Cucumber
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057617373629899081, guid: 90c85fc05ef094e4dbf2fa0189dbb7eb, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057617373629899081, guid: 90c85fc05ef094e4dbf2fa0189dbb7eb, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057617373629899081, guid: 90c85fc05ef094e4dbf2fa0189dbb7eb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8623841128021320133, guid: 90c85fc05ef094e4dbf2fa0189dbb7eb, type: 3}
       propertyPath: onhand
@@ -14619,7 +14615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1301543087
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14998,7 +14994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1329562910
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18946,7 +18942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 34.775
+      value: 47.875
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20424,7 +20420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1846989698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22098,8 +22094,8 @@ GameObject:
   - component: {fileID: 2007848787}
   - component: {fileID: 2007848786}
   - component: {fileID: 2007848785}
-  - component: {fileID: 2007848784}
   - component: {fileID: 2007848782}
+  - component: {fileID: 2007848789}
   m_Layer: 0
   m_Name: Pepper 1
   m_TagString: 'Vegetable '
@@ -22122,28 +22118,6 @@ MonoBehaviour:
   onhand: {fileID: 14738244}
   pickupRange: 10
   throwForce: 0
---- !u!64 &2007848784
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007848781}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6187883067242612374, guid: d27021cd19462844c9401ba927e7e80d, type: 3}
 --- !u!54 &2007848785
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22167,10 +22141,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!23 &2007848786
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22243,6 +22217,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2007848789
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007848781}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2015648521
 PrefabInstance:
   m_ObjectHideFlags: 0
