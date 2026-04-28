@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public GameObject loseCanvas;
     public GameObject timerCanvas;
 
+    public bool timerWins = true;
+
     public TextMeshProUGUI timerText;
     public float timeLimit = 120f;
     private float currentTime;
@@ -47,7 +49,12 @@ public class GameManager : MonoBehaviour
             if (timerText != null)
                 timerText.text = "Night ends in: " + Mathf.CeilToInt(currentTime) + "s";
             if (currentTime <= 0)
-                ChangeState(GameState.LevelComplete);
+            {
+                if (timerWins)
+                    ChangeState(GameState.LevelComplete);
+                else
+                    ChangeState(GameState.GameOver);
+            }
         }
 
         if (currentState == GameState.GameOver)

@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The crows scared Pike back to the start!!
+  m_text: Pike got too scared and ran away...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4002,6 +4002,7 @@ MonoBehaviour:
   winCanvas: {fileID: 1300651360}
   loseCanvas: {fileID: 1413564763}
   timerCanvas: {fileID: 1034132343}
+  timerWins: 0
   timerText: {fileID: 951554158}
   timeLimit: 5
   victorySound: {fileID: 657927742}
@@ -7972,6 +7973,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6729821928108359547, guid: 20323439778c647dda7e75dde16f9710, type: 3}
   m_PrefabInstance: {fileID: 1268079877}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1287319074
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 146.6985
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000104904175
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 207.60832
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.02157985
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9997671
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 182.473
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+      propertyPath: m_Name
+      value: Digby overalls yellow final squished short ears (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
 --- !u!1 &1300651360
 GameObject:
   m_ObjectHideFlags: 0
@@ -13260,3 +13330,4 @@ SceneRoots:
   - {fileID: 1810348601}
   - {fileID: 1051458464}
   - {fileID: 1536122043}
+  - {fileID: 1287319074}
