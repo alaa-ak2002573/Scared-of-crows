@@ -5,7 +5,7 @@ public class CrowCircle : MonoBehaviour
     [Header("Circle Settings")]
     private float radius = 30f;
     private float speed = 20f;
-    private float height = 35f;
+    private float height = 30f;
 
     private float angle = 0f;
     private Vector3 centerPoint;
