@@ -3,7 +3,7 @@ using UnityEngine;
 public class CrowPatrol : MonoBehaviour
 {
     [Header("Patrol Settings")]
-    private float moveSpeed = 30f;          // matches player walk
+    private float moveSpeed = 20f;          // matches player walk
     private float patrolTime = 3f;
 
     [Header("Detection")]
@@ -11,7 +11,7 @@ public class CrowPatrol : MonoBehaviour
     private float soundRadius = 140f;       // sprint hearing
 
     [Header("Chase Speeds")]
-    private float chaseSpeed = 40f;
+    private float chaseSpeed = 30f;
     private float returnSpeed = 45f;
 
     private float timer;

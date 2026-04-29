@@ -7,8 +7,9 @@ public class VegetableInventory : MonoBehaviour
     public Transform onhand;
     public int startingVegetables = 3;
     public float throwForce = 25f;
-
     private int count;
+
+    public int Count => count;
     private InputAction throwAction;
     private GameObject currentVisual;
     private Camera mainCam;

@@ -3200,6 +3200,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6729821928108359547, guid: 20323439778c647dda7e75dde16f9710, type: 3}
   m_PrefabInstance: {fileID: 1549298842131903965}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &482462799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482462801}
+  - component: {fileID: 482462800}
+  m_Layer: 0
+  m_Name: LoseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &482462800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482462799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a86eddccab5b34b7a9995056680a9581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoseCondition
+  loseCanvas: {fileID: 1413564763}
+--- !u!4 &482462801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482462799}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 528.28595, y: 0, z: 325.31592}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &483112504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13873,3 +13918,4 @@ SceneRoots:
   - {fileID: 1287319074}
   - {fileID: 348363721}
   - {fileID: 2113158328}
+  - {fileID: 482462801}
