@@ -5,20 +5,23 @@ public class CrowCircle : MonoBehaviour
     [Header("Circle Settings")]
     private float radius = 30f;
     private float speed = 20f;
-    private float height = 20f;
+    private float height = 35f;
 
     private float angle = 0f;
     private Vector3 centerPoint;
     public float startAngle = 0f;
+    public Transform digby;
 
     void Start()
     {
-        centerPoint = transform.position;
         angle = startAngle;
     }
 
     void Update()
     {
+        if (digby != null)
+            centerPoint = digby.position;
+
         angle += speed * Time.deltaTime;
 
         float x = centerPoint.x + Mathf.Cos(angle * Mathf.Deg2Rad) * radius;

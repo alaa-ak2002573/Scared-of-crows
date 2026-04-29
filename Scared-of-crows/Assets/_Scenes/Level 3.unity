@@ -1615,6 +1615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrowCircle
   startAngle: 240
+  digby: {fileID: 650017929}
 --- !u!1001 &220334629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4143,6 +4144,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632813891}
   m_CullTransparentMesh: 1
+--- !u!4 &650017929 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c3d2c5ebc22a5d947a79208f438d31bb, type: 3}
+  m_PrefabInstance: {fileID: 1287319074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &657927738
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,6 +5589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrowCircle
   startAngle: 0
+  digby: {fileID: 650017929}
 --- !u!114 &839437057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12745,6 +12752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrowCircle
   startAngle: 120
+  digby: {fileID: 650017929}
 --- !u!1001 &1925611045
 PrefabInstance:
   m_ObjectHideFlags: 0
