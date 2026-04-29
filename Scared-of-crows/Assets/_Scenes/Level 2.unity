@@ -2092,7 +2092,7 @@ GameObject:
   - component: {fileID: 259379404}
   m_Layer: 0
   m_Name: HidingSpot (4)
-  m_TagString: HidingSpot
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3980,7 +3980,7 @@ GameObject:
   - component: {fileID: 408938169}
   m_Layer: 0
   m_Name: HidingSpot
-  m_TagString: HidingSpot
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5689,7 +5689,7 @@ GameObject:
   - component: {fileID: 514542331}
   m_Layer: 0
   m_Name: HidingSpot (5)
-  m_TagString: HidingSpot
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8482,7 +8482,7 @@ GameObject:
   - component: {fileID: 706996898}
   m_Layer: 0
   m_Name: HidingSpot (1)
-  m_TagString: HidingSpot
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13094,7 +13094,7 @@ GameObject:
   - component: {fileID: 1107701193}
   m_Layer: 0
   m_Name: HidingSpot (3)
-  m_TagString: HidingSpot
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18855,7 +18855,7 @@ GameObject:
   - component: {fileID: 1691950356}
   m_Layer: 0
   m_Name: HidingSpot (6)
-  m_TagString: HidingSpot
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20532,7 +20532,7 @@ GameObject:
   - component: {fileID: 1847298330}
   m_Layer: 0
   m_Name: HidingSpot (2)
-  m_TagString: HidingSpot
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
