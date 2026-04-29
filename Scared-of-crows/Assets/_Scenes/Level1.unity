@@ -369,6 +369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1142,6 +1146,10 @@ PrefabInstance:
     - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
       propertyPath: m_Name
       value: Barell (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2657,6 +2665,10 @@ PrefabInstance:
     - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
       propertyPath: m_Name
       value: Barell (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4617,6 +4629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4963,6 +4979,10 @@ PrefabInstance:
     - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
       propertyPath: m_Name
       value: Barell (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7552,6 +7572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8717,6 +8741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8786,6 +8814,7 @@ MonoBehaviour:
   winCanvas: {fileID: 674315177}
   loseCanvas: {fileID: 624785113}
   timerCanvas: {fileID: 2055868628}
+  timerWins: 1
   timerText: {fileID: 234996673}
   timeLimit: 15
   victorySound: {fileID: 809207032}
@@ -10599,7 +10628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &968180885
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12009,6 +12038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12901,6 +12934,10 @@ PrefabInstance:
     - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
       propertyPath: m_Name
       value: Barell (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16868,6 +16905,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18416,6 +18457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18587,6 +18632,10 @@ PrefabInstance:
     - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
       propertyPath: m_Name
       value: Barell (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19876,6 +19925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20688,6 +20741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21211,7 +21268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1997916488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22435,6 +22492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22694,6 +22755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barell
       objectReference: {fileID: 0}
+    - target: {fileID: 7622348298933836778, guid: 1819837d376ad4245bfc774bfad477ae, type: 3}
+      propertyPath: m_TagString
+      value: UseToHide
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22813,7 +22878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2122021021
 MonoBehaviour:
   m_ObjectHideFlags: 0
