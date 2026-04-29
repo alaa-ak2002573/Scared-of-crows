@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
             timerCanvas.SetActive(false);
             if (victorySound != null)
                 victorySound.Play();
+            FadeManager.instance.FadeToBlack();
         }
 
         if (newState == GameState.GameOver)
