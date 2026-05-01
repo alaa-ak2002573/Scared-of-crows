@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
 
         if (newState == GameState.LevelComplete)
         {
+            StopAllCrows();
             winCanvas.SetActive(true);
             timerCanvas.SetActive(false);
             if (victorySound != null)
@@ -108,5 +109,34 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(nextScene);
         else
             SceneManager.LoadScene(0);
+    }
+
+    void StopAllCrows()
+    {
+        // Stop CrowPatrol scripts
+        foreach (CrowPatrol crow in FindObjectsByType<CrowPatrol>(FindObjectsSortMode.None))
+        {
+            crow.enabled = false;
+
+            Rigidbody rb = crow.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector3.zero;
+                rb.isKinematic = true;
+            }
+        }
+
+        // Stop CrowCatch scripts
+        foreach (CrowCatch crow in FindObjectsByType<CrowCatch>(FindObjectsSortMode.None))
+        {
+            crow.enabled = false;
+
+            Rigidbody rb = crow.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector3.zero;
+                rb.isKinematic = true;
+            }
+        }
     }
 }
