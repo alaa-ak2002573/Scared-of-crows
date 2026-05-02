@@ -20,7 +20,11 @@ public class VegetableInventory : MonoBehaviour
             type: InputActionType.Button,
             binding: "<Mouse>/leftButton"
         );
-        throwAction.performed += _ => ThrowVegetable();
+        throwAction.performed += _ =>
+        {
+            if (Time.timeScale == 0f) return; // don't throw during intro
+            ThrowVegetable();
+        };
         throwAction.Enable();
     }
 
