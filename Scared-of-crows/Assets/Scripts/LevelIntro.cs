@@ -29,8 +29,20 @@ public class LevelIntro : MonoBehaviour
     [Header("Other UI")]
     public GameObject detectionCanvas;
 
+    private static bool hasPlayed = false;
+
     void Start()
     {
+        if (hasPlayed)
+        {
+            introCanvas.SetActive(false);
+            if (detectionCanvas != null)
+                detectionCanvas.SetActive(true);
+            return;
+        }
+
+        hasPlayed = true;
+        // rest of your Start() code
         if (detectionCanvas != null)
             detectionCanvas.SetActive(false);
 
