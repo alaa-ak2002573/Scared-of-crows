@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 
@@ -7,53 +8,103 @@ public class LevelIntro : MonoBehaviour
     [Header("UI")]
     public GameObject introCanvas;
     public TextMeshProUGUI dialogueText;
+    public Button nextButton;
+    public TextMeshProUGUI buttonText;
 
-    [Header("Timing")]
+    [Header("Typewriter Settings")]
     public float typingSpeed = 0.05f;
-    public float displayDuration = 3f;
+
+    [Header("Typing Sound")]
+    public AudioSource typingAudio;
+
+    [Header("Audio")]
+    public AudioSource levelMusic;
 
     [Header("Dialogue")]
     [TextArea(2, 5)]
     public string[] slides;
 
-    [Header("Audio")]
-    public AudioSource levelMusic;
-    public AudioSource typingAudio;
+    private int currentSlide = 0;
+    private bool isTyping = false;
+    [Header("Other UI")]
+    public GameObject detectionCanvas;
 
     void Start()
     {
+        if (detectionCanvas != null)
+            detectionCanvas.SetActive(false);
+
         Time.timeScale = 0f;
         introCanvas.SetActive(true);
-        StartCoroutine(PlayDialogue());
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        nextButton.onClick.AddListener(OnNextClicked);
+        StartCoroutine(TypeText(slides[0]));
+    }
+    void Update()
+    {
+        if (introCanvas.activeSelf)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
-    IEnumerator PlayDialogue()
+    IEnumerator TypeText(string text)
     {
-        foreach (string slide in slides)
+        isTyping = true;
+        dialogueText.text = "";
+        buttonText.text = "Skip";
+
+        if (typingAudio != null)
         {
-            dialogueText.text = "";
+            typingAudio.Stop();
+            typingAudio.Play();
+        }
 
-            if (typingAudio != null)
-            {
-                typingAudio.Play();
-            }
+        foreach (char c in text)
+        {
+            dialogueText.text += c;
+            yield return new WaitForSecondsRealtime(typingSpeed);
+        }
 
-            foreach (char c in slide)
-            {
-                dialogueText.text += c;
-                yield return new WaitForSecondsRealtime(typingSpeed);
-            }
+        if (typingAudio != null)
+            typingAudio.Stop();
+
+        isTyping = false;
+        buttonText.text = (currentSlide == slides.Length - 1) ? "Start" : "Next";
+    }
+
+    void OnNextClicked()
+    {
+        if (isTyping)
+        {
+            StopAllCoroutines();
+            dialogueText.text = slides[currentSlide];
+            isTyping = false;
 
             if (typingAudio != null)
                 typingAudio.Stop();
 
-            yield return new WaitForSecondsRealtime(displayDuration);
+            buttonText.text = (currentSlide == slides.Length - 1) ? "Start" : "Next";
+            return;
         }
 
-        introCanvas.SetActive(false);
-        Time.timeScale = 1f;
-
-        if (levelMusic != null)
-            levelMusic.Play();
+        currentSlide++;
+        if (currentSlide >= slides.Length)
+        {
+            introCanvas.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1f;
+            if (detectionCanvas != null)
+                detectionCanvas.SetActive(true);
+            if (levelMusic != null)
+                levelMusic.Play();
+        }
+        else
+        {
+            StartCoroutine(TypeText(slides[currentSlide]));
+        }
     }
 }
