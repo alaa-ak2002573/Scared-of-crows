@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
 
         if (newState == GameState.GameOver)
         {
+            StopAllCrows();
             loseCanvas.SetActive(true);
             timerCanvas.SetActive(false);
             FadeManager.instance.FadeToBlack();
