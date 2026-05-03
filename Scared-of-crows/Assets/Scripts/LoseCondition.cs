@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LoseCondition : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class LoseCondition : MonoBehaviour
     private VegetableInventory vegetableInventory;
     private WinCondition winCondition;
     private bool checking = false;
+    private bool hasLost = false;
 
     void Start()
     {
@@ -18,6 +21,13 @@ public class LoseCondition : MonoBehaviour
     void Update()
     {
         if (vegetableInventory == null || winCondition == null) return;
+        
+        if (hasLost && Keyboard.current.rKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            return;
+        }
+        
         if (checking) return;
 
         if (vegetableInventory.Count <= 0 && !winCondition.AllCrowsDead)
@@ -34,7 +44,7 @@ public class LoseCondition : MonoBehaviour
         if (!winCondition.AllCrowsDead)
         {
             loseCanvas.SetActive(true);
-            Time.timeScale = 0f;
+            hasLost = true;
         }
     }
 }

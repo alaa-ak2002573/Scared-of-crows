@@ -4444,6 +4444,7 @@ MonoBehaviour:
   timeLimit: 50
   victorySound: {fileID: 657927742}
   lossSound: {fileID: 657927741}
+  detectionCanvas: {fileID: 0}
 --- !u!1 &670037492
 GameObject:
   m_ObjectHideFlags: 0
