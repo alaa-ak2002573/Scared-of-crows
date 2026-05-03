@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public AudioSource victorySound;
     public AudioSource lossSound;
 
+    public GameObject detectionCanvas;
+
     void Awake()
     {
         if (instance == null)
@@ -79,6 +81,8 @@ public class GameManager : MonoBehaviour
             StopAllCrows();
             winCanvas.SetActive(true);
             timerCanvas.SetActive(false);
+            if (detectionCanvas != null)
+                detectionCanvas.SetActive(false);
             if (victorySound != null)
                 victorySound.Play();
             FadeManager.instance.FadeToBlack();
@@ -89,6 +93,8 @@ public class GameManager : MonoBehaviour
             StopAllCrows();
             loseCanvas.SetActive(true);
             timerCanvas.SetActive(false);
+            if (detectionCanvas != null)
+                detectionCanvas.SetActive(false);
             FadeManager.instance.FadeToBlack();
             if (lossSound != null)
                 lossSound.Play();

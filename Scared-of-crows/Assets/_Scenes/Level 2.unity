@@ -9733,6 +9733,7 @@ MonoBehaviour:
   timeLimit: 70
   victorySound: {fileID: 809207032}
   lossSound: {fileID: 809207033}
+  detectionCanvas: {fileID: 1021195016}
 --- !u!4 &809207031
 Transform:
   m_ObjectHideFlags: 0
