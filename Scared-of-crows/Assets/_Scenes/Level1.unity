@@ -8953,7 +8953,7 @@ MonoBehaviour:
   timerCanvas: {fileID: 2055868628}
   timerWins: 1
   timerText: {fileID: 234996673}
-  timeLimit: 10
+  timeLimit: 50
   victorySound: {fileID: 809207032}
   lossSound: {fileID: 809207033}
   detectionCanvas: {fileID: 1642496005}
@@ -12294,10 +12294,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1465148794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1106247033
 MonoBehaviour:
