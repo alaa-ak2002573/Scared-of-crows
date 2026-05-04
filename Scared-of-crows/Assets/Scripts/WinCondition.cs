@@ -4,6 +4,8 @@ public class WinCondition : MonoBehaviour
 {
     public GameObject winCanvas;
     public CrowHealth[] crows;
+    private bool winTriggered = false;
+
     public bool AllCrowsDead
     {
         get
@@ -18,11 +20,22 @@ public class WinCondition : MonoBehaviour
 
     void Update()
     {
+        if (winTriggered) return;
+
         foreach (CrowHealth crow in crows)
         {
             if (!crow.IsDead) return;
         }
 
-        winCanvas.SetActive(true);
+        winTriggered = true;
+
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.ChangeState(GameManager.GameState.LevelComplete);
+        }
+        else if (winCanvas != null)
+        {
+            winCanvas.SetActive(true);
+        }
     }
 }
