@@ -29,11 +29,14 @@ public class LevelIntro : MonoBehaviour
     [Header("Other UI")]
     public GameObject detectionCanvas;
 
-    private static bool hasPlayed = false;
+    ///private static bool hasPlayed = false;
+    private static string lastPlayedScene = "";
 
     void Start()
     {
-        if (hasPlayed)
+        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+        if (lastPlayedScene == currentScene)
         {
             introCanvas.SetActive(false);
             if (detectionCanvas != null)
@@ -41,7 +44,8 @@ public class LevelIntro : MonoBehaviour
             return;
         }
 
-        hasPlayed = true;
+        lastPlayedScene = currentScene;
+
         // rest of your Start() code
         if (detectionCanvas != null)
             detectionCanvas.SetActive(false);
