@@ -10187,7 +10187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7631829911722037680, guid: e957bf84bae9042028800da99c061e0f, type: 3}
       propertyPath: m_Name
-      value: crowL1
+      value: MasterCrow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12363,7 +12363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1810348598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13647,7 +13647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2026147704
 MonoBehaviour:
   m_ObjectHideFlags: 0
