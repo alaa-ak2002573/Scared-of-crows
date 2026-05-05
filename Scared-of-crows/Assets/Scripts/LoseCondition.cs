@@ -43,7 +43,7 @@ public class LoseCondition : MonoBehaviour
 
         if (!winCondition.AllCrowsDead)
         {
-            loseCanvas.SetActive(true);
+            GameManager.instance.ChangeState(GameManager.GameState.GameOver);
             hasLost = true;
         }
     }
