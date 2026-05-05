@@ -10133,6 +10133,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2992537591488982824, guid: e957bf84bae9042028800da99c061e0f, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992537591488982824, guid: e957bf84bae9042028800da99c061e0f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7107353602747058954, guid: e957bf84bae9042028800da99c061e0f, type: 3}
       propertyPath: m_LocalScale.x
       value: 20
