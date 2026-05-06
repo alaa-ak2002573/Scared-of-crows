@@ -1,9 +1,25 @@
 using UnityEngine;
+using TMPro;
 
 public class Deliveryzone : MonoBehaviour
 {
     private int vegetableCount = 0;
     private bool levelComplete = false;
+    public int totalVegetables = 3;
+    public TextMeshProUGUI vegCounterText;
+
+    void Start()
+    {
+        UpdateUI();
+    }
+
+    void UpdateUI()
+    {
+        if (vegCounterText != null)
+        {
+            vegCounterText.text = "Carrots: " + vegetableCount + "/" + totalVegetables;
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -19,7 +35,9 @@ public class Deliveryzone : MonoBehaviour
                 {
                     veg.Drop();
                     vegetableCount++;
-                    Debug.Log("Vegetables delivered: " + vegetableCount);
+                    UpdateUI();
+
+                    // Debug.Log("Vegetables delivered: " + vegetableCount);
 
                     if (vegetableCount >= 3)
                     {
