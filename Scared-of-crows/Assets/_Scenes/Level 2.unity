@@ -21365,13 +21365,16 @@ MonoBehaviour:
   typingSpeed: 0.05
   typingAudio: {fileID: 1329562910}
   levelMusic: {fileID: 0}
+  finaleAudio: {fileID: 0}
   slides:
-  - 'Digby: Pike! What did you do all night?! The crops are still scattered everywhere!'
-  - 'Digby: You can''t even do the one thing I asked. Unbelievable.'
-  - 'Digby: Fine. YOU collect the crops. Every. Single. One. I need 3 carrots delivered
-    to the trough!'
-  - 'Digby: And don''t make noise while carrying them ... crows will hear you from
-    a mile away.'
+  - 'Digby: "Pike! What did you do all night?! The crops are still scattered everywhere!"'
+  - 'Digby: "You can''t even do the one thing I asked. Unbelievable."'
+  - 'Digby: "Fine. YOU collect the crops. Every. Single. One. I need 3 carrots delivered
+    to the trough!"'
+  - 'Digby: "And don''t make noise while carrying them ... crows will hear you from
+    a mile away."'
+  - 'Digby: "And don''t come near the barn. I''m serious this time."'
+  - 'Digby: "I''ll know if you do."'
   detectionCanvas: {fileID: 1021195016}
 --- !u!4 &1846989699
 Transform:
@@ -25060,8 +25063,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hidden
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5db82c04f7ae1164bad045fcaf7f2823, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 5db82c04f7ae1164bad045fcaf7f2823, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

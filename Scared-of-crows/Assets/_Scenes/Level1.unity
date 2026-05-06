@@ -3647,8 +3647,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hidden
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5db82c04f7ae1164bad045fcaf7f2823, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 5db82c04f7ae1164bad045fcaf7f2823, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23157,11 +23157,14 @@ MonoBehaviour:
   typingSpeed: 0.05
   typingAudio: {fileID: 968180885}
   levelMusic: {fileID: 0}
+  finaleAudio: {fileID: 0}
   slides:
-  - 'Digby: Pike. Get up. The farm needs guarding ... now.'
-  - 'Digby: You see those crows? Chase them off. That''s literally your only job.'
-  - 'Digby: And keep it down! Crows hear everything. Don''t go stomping around.'
-  - 'Digby: I''m going to sleep. Don''t mess this up.'
+  - 'Digby: "Pike. Get up. The farm needs guarding ... now."'
+  - 'Digby: "You see those crows? Chase them off. That''s literally your only job."'
+  - 'Digby: "And keep it down! Crows hear everything. Don''t go stomping around."'
+  - 'Digby: "I''m going to sleep. Don''t mess this up."'
+  - 'Digby: "And stay out of the barn. That''s my space."'
+  - 'Digby: "Don''t come knocking. I won''t answer."'
   detectionCanvas: {fileID: 1642496005}
 --- !u!4 &2122021022
 Transform:
