@@ -19,6 +19,7 @@ public class LevelIntro : MonoBehaviour
 
     [Header("Audio")]
     public AudioSource levelMusic;
+    public AudioSource finaleAudio;
 
     [Header("Dialogue")]
     [TextArea(2, 5)]
@@ -26,10 +27,12 @@ public class LevelIntro : MonoBehaviour
 
     private int currentSlide = 0;
     private bool isTyping = false;
+    private bool audioSequenceStarted = false;
+    private bool levelMusicStopped = false;
+
     [Header("Other UI")]
     public GameObject detectionCanvas;
 
-    ///private static bool hasPlayed = false;
     private static string lastPlayedScene = "";
 
     void Start()
@@ -46,9 +49,14 @@ public class LevelIntro : MonoBehaviour
 
         lastPlayedScene = currentScene;
 
-        // rest of your Start() code
         if (detectionCanvas != null)
             detectionCanvas.SetActive(false);
+
+        if (levelMusic != null && levelMusic.isPlaying)
+            levelMusic.Stop();
+
+        if (finaleAudio != null && finaleAudio.isPlaying)
+            finaleAudio.Stop();
 
         Time.timeScale = 0f;
         introCanvas.SetActive(true);
@@ -57,12 +65,24 @@ public class LevelIntro : MonoBehaviour
         nextButton.onClick.AddListener(OnNextClicked);
         StartCoroutine(TypeText(slides[0]));
     }
+
     void Update()
     {
         if (introCanvas.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+        }
+
+        if (!levelMusicStopped && GameManager.instance != null)
+        {
+            if (GameManager.instance.currentState == GameManager.GameState.LevelComplete || GameManager.instance.currentState == GameManager.GameState.GameOver)
+            {
+                if (levelMusic != null && levelMusic.isPlaying)
+                    levelMusic.Stop();
+
+                levelMusicStopped = true;
+            }
         }
     }
 
@@ -115,12 +135,28 @@ public class LevelIntro : MonoBehaviour
             Time.timeScale = 1f;
             if (detectionCanvas != null)
                 detectionCanvas.SetActive(true);
-            if (levelMusic != null)
-                levelMusic.Play();
+            if (!audioSequenceStarted)
+            {
+                audioSequenceStarted = true;
+                StartCoroutine(PlayAudioSequence());
+            }
         }
         else
         {
             StartCoroutine(TypeText(slides[currentSlide]));
         }
+    }
+
+    IEnumerator PlayAudioSequence()
+    {
+        if (finaleAudio != null)
+        {
+            finaleAudio.Play();
+            if (finaleAudio.clip != null)
+                yield return new WaitForSeconds(finaleAudio.clip.length);
+        }
+
+        if (levelMusic != null)
+            levelMusic.Play();
     }
 }
