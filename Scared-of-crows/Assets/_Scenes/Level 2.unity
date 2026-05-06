@@ -21368,7 +21368,8 @@ MonoBehaviour:
   slides:
   - 'Digby: Pike! What did you do all night?! The crops are still scattered everywhere!'
   - 'Digby: You can''t even do the one thing I asked. Unbelievable.'
-  - 'Digby: Fine. YOU collect the crops. Every. Single. One.'
+  - 'Digby: Fine. YOU collect the crops. Every. Single. One. I need 3 carrots delivered
+    to the trough!'
   - 'Digby: And don''t make noise while carrying them ... crows will hear you from
     a mile away.'
   detectionCanvas: {fileID: 1021195016}
