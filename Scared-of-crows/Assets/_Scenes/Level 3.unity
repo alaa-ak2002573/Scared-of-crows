@@ -14,19 +14,19 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.7987421, g: 0.62562853, b: 0.57017124, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.002
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.67
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 9aa9efb342e8ba148a24cf58765b8e22, type: 2}
+  m_SubtractiveShadowColor: {r: 0.4027192, g: 0.240655, b: 0.4528302, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 247b3e3eb34f57e4e884d153aacac481, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrowCircle
   startAngle: 240
-  digby: {fileID: 0}
+  digby: {fileID: 1000807277}
 --- !u!1001 &220334629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5896,7 +5896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrowCircle
   startAngle: 0
-  digby: {fileID: 0}
+  digby: {fileID: 1000807277}
 --- !u!114 &839437057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7212,6 +7212,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5016044373871051819, guid: 648c3af66fd59410788aa208de954fc1, type: 3}
   m_PrefabInstance: {fileID: 999662436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1000807277 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dcc9e677711195047a6264a829efc76e, type: 3}
+  m_PrefabInstance: {fileID: 355374754}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1018251269
 PrefabInstance:
@@ -13326,7 +13331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrowCircle
   startAngle: 120
-  digby: {fileID: 0}
+  digby: {fileID: 1000807277}
 --- !u!1001 &1925611045
 PrefabInstance:
   m_ObjectHideFlags: 0
