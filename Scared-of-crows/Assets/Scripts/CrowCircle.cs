@@ -6,8 +6,6 @@ public class CrowCircle : MonoBehaviour
     private float radius = 30f;
     private float speed = 30f;
     private float height = 30f;
-    private float heightAmplitude = 5f;
-    private float heightFrequency = 0.3f;
 
     private float angle = 0f;
     private Vector3 centerPoint;
@@ -28,7 +26,7 @@ public class CrowCircle : MonoBehaviour
 
         float x = centerPoint.x + Mathf.Cos(angle * Mathf.Deg2Rad) * radius;
         float z = centerPoint.z + Mathf.Sin(angle * Mathf.Deg2Rad) * radius;
-        float y = height + Mathf.Sin(angle * heightFrequency) * heightAmplitude;
+        float y = height;
 
         transform.position = new Vector3(x, y, z);
         transform.LookAt(new Vector3(x + Mathf.Cos((angle + 90) * Mathf.Deg2Rad), y, z + Mathf.Sin((angle + 90) * Mathf.Deg2Rad)));
