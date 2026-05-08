@@ -32,6 +32,7 @@ public class LevelIntro : MonoBehaviour
 
     [Header("Other UI")]
     public GameObject detectionCanvas;
+    public GameObject carrotHintUI;
 
     private static string lastPlayedScene = "";
 
@@ -135,6 +136,8 @@ public class LevelIntro : MonoBehaviour
             Time.timeScale = 1f;
             if (detectionCanvas != null)
                 detectionCanvas.SetActive(true);
+            if (carrotHintUI != null)
+                StartCoroutine(ShowCarrotHint());
             if (!audioSequenceStarted)
             {
                 audioSequenceStarted = true;
@@ -158,5 +161,11 @@ public class LevelIntro : MonoBehaviour
 
         if (levelMusic != null)
             levelMusic.Play();
+    }
+    IEnumerator ShowCarrotHint()
+    {
+        carrotHintUI.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        carrotHintUI.SetActive(false);
     }
 }
