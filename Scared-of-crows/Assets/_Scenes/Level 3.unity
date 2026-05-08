@@ -4705,6 +4705,8 @@ MonoBehaviour:
   victorySound: {fileID: 657927742}
   lossSound: {fileID: 657927741}
   detectionCanvas: {fileID: 0}
+  winMessage: You did it! Pike is no longer just a scarecrow.
+  winText: {fileID: 773908806}
 --- !u!1 &670037492
 GameObject:
   m_ObjectHideFlags: 0

@@ -8957,6 +8957,8 @@ MonoBehaviour:
   victorySound: {fileID: 809207032}
   lossSound: {fileID: 809207033}
   detectionCanvas: {fileID: 1642496005}
+  winMessage: Pike survived the night!!
+  winText: {fileID: 292948227}
 --- !u!4 &809207031
 Transform:
   m_ObjectHideFlags: 0

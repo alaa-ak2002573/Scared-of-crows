@@ -1870,7 +1870,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2669,7 +2669,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4282833663
-  m_fontColor: {r: 1, g: 0.8543323, b: 0.27358478, a: 1}
+  m_fontColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6674,7 +6674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -100, y: -50}
+  m_AnchoredPosition: {x: -150, y: -50}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &576191346
@@ -10266,6 +10266,8 @@ MonoBehaviour:
   victorySound: {fileID: 809207032}
   lossSound: {fileID: 809207033}
   detectionCanvas: {fileID: 1021195016}
+  winMessage: They took him !!
+  winText: {fileID: 292948227}
 --- !u!4 &809207031
 Transform:
   m_ObjectHideFlags: 0
@@ -10292,7 +10294,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: bf3448d45f45f2c4dbec00d02ddfe35b, type: 3}
+  m_Resource: {fileID: 8300000, guid: fc217c250053cc547809af70926cd753, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -18992,6 +18994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Deliveryzone
   totalVegetables: 3
   vegCounterText: {fileID: 576191346}
+  digby: {fileID: 1988115460}
 --- !u!135 &1596950883
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20464,6 +20467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Deliveryzone
   totalVegetables: 3
   vegCounterText: {fileID: 0}
+  digby: {fileID: 0}
 --- !u!135 &1734857539
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23767,6 +23771,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcc9e677711195047a6264a829efc76e, type: 3}
+--- !u!1 &1988115460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dcc9e677711195047a6264a829efc76e, type: 3}
+  m_PrefabInstance: {fileID: 1988115459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1991831235 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4720978471009053354, guid: 4985f07e2cafaa940b2829049d2bac7c, type: 3}

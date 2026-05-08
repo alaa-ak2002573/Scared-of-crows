@@ -25,6 +25,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject detectionCanvas;
 
+    [TextArea(2, 4)]
+    public string winMessage = "Pike survived the night!!";
+    public TextMeshProUGUI winText;
+
     void Awake()
     {
         if (instance == null)
@@ -79,6 +83,8 @@ public class GameManager : MonoBehaviour
         if (newState == GameState.LevelComplete)
         {
             StopAllCrows();
+            if (winText != null)
+                winText.text = winMessage;
             winCanvas.SetActive(true);
             timerCanvas.SetActive(false);
             if (detectionCanvas != null)
@@ -120,11 +126,9 @@ public class GameManager : MonoBehaviour
 
     void StopAllCrows()
     {
-        // Stop CrowPatrol scripts
         foreach (CrowPatrol crow in FindObjectsByType<CrowPatrol>(FindObjectsSortMode.None))
         {
             crow.enabled = false;
-
             Rigidbody rb = crow.GetComponent<Rigidbody>();
             if (rb != null)
             {
@@ -133,11 +137,9 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // Stop CrowCatch scripts
         foreach (CrowCatch crow in FindObjectsByType<CrowCatch>(FindObjectsSortMode.None))
         {
             crow.enabled = false;
-
             Rigidbody rb = crow.GetComponent<Rigidbody>();
             if (rb != null)
             {

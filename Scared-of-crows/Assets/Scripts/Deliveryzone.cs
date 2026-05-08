@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class Deliveryzone : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Deliveryzone : MonoBehaviour
     private bool levelComplete = false;
     public int totalVegetables = 3;
     public TextMeshProUGUI vegCounterText;
+    public GameObject digby;
 
     void Start()
     {
@@ -16,16 +18,14 @@ public class Deliveryzone : MonoBehaviour
     void UpdateUI()
     {
         if (vegCounterText != null)
-        {
             vegCounterText.text = "Carrots: " + vegetableCount + "/" + totalVegetables;
-        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (levelComplete) return;
 
-        if (other.CompareTag("Player"))
+        if (other.gameObject.tag.Trim() == "Player")
         {
             vegetablePickup[] allVegs = FindObjectsByType<vegetablePickup>(FindObjectsSortMode.None);
 
@@ -37,17 +37,25 @@ public class Deliveryzone : MonoBehaviour
                     vegetableCount++;
                     UpdateUI();
 
-                    // Debug.Log("Vegetables delivered: " + vegetableCount);
-
-                    if (vegetableCount >= 3)
+                    if (vegetableCount >= totalVegetables)
                     {
                         levelComplete = true;
-                        GameManager.instance.ChangeState(GameManager.GameState.LevelComplete);
+                        StartCoroutine(LevelCompleteSequence());
                     }
 
                     return;
                 }
             }
         }
+    }
+
+    IEnumerator LevelCompleteSequence()
+    {
+        if (digby != null)
+            digby.SetActive(false);
+
+        yield return new WaitForSeconds(1f);
+
+        GameManager.instance.ChangeState(GameManager.GameState.LevelComplete);
     }
 }
