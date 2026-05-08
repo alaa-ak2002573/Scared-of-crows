@@ -21682,10 +21682,9 @@ MonoBehaviour:
   - 'Digby: "You can''t even do the one thing I asked. Unbelievable."'
   - 'Digby: "Fine. YOU collect the crops. Every. Single. One. I need 3 carrots delivered
     to the trough!"'
-  - 'Digby: "And don''t make noise while carrying them ... crows will hear you from
-    a mile away."'
+  - 'Digby: "Don''t make noise while carrying them ... crows will hear you from a
+    mile away."'
   - 'Digby: "And don''t come near the barn. I''m serious this time."'
-  - 'Digby: "I''ll know if you do."'
   detectionCanvas: {fileID: 1021195016}
 --- !u!4 &1846989699
 Transform:
