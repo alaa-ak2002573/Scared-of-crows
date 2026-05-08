@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameManager : MonoBehaviour
@@ -24,10 +25,12 @@ public class GameManager : MonoBehaviour
     public AudioSource lossSound;
 
     public GameObject detectionCanvas;
+    public Button mainMenuButton;
 
     [TextArea(2, 4)]
     public string winMessage = "Pike survived the night!!";
     public TextMeshProUGUI winText;
+
 
     void Awake()
     {
@@ -45,6 +48,11 @@ public class GameManager : MonoBehaviour
         loseCanvas.SetActive(false);
         timerCanvas.SetActive(true);
         FadeManager.instance.FadeFromBlack();
+        if (mainMenuButton != null)
+        {
+            mainMenuButton.gameObject.SetActive(false);
+            mainMenuButton.onClick.AddListener(() => SceneManager.LoadScene("MainMenu"));
+        }
     }
 
     void Update()
@@ -91,6 +99,8 @@ public class GameManager : MonoBehaviour
                 detectionCanvas.SetActive(false);
             if (victorySound != null)
                 victorySound.Play();
+            if (mainMenuButton != null)
+                mainMenuButton.gameObject.SetActive(true);
             FadeManager.instance.FadeToBlack();
         }
 
