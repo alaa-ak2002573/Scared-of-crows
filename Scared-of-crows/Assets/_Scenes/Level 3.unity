@@ -4706,7 +4706,8 @@ MonoBehaviour:
   lossSound: {fileID: 657927741}
   detectionCanvas: {fileID: 0}
   mainMenuButton: {fileID: 1721126929}
-  winMessage: You did it! Pike is no longer just a scarecrow.
+  winMessage: "You did it! Digby is rescued! Pike is braver than ever and the farm
+    now has its hero.\n Who's scared now? Not Pike!"
   winText: {fileID: 773908806}
 --- !u!1 &670037492
 GameObject:
@@ -14270,6 +14271,7 @@ MonoBehaviour:
   - '"These carrots... I can throw them. Drive the crows away." '
   - '" I''m coming, Digby."'
   detectionCanvas: {fileID: 0}
+  carrotHintUI: {fileID: 0}
 --- !u!4 &2026147705
 Transform:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ public class StoryManager : MonoBehaviour
         "At first, Pike was nothing more than wood, straw, and cloth… standing silently in the field.\n\nBut something unusual happened.\n\nPike came to life.",
         "Confused and afraid, Pike became aware of his surroundings ... the wind, the crops, and most importantly, the crows.\n\nIronically, the very creatures he was created to frighten became the source of his fear.",
         "From this moment, you will take control of Pike.\n\nNavigate the farm, avoid crow patrols, and survive using stealth, hiding, and careful movement.",
-        "Are the crows truly enemies… or something more?\n\n"
+        "The farm needs a hero, and a scarecrow will have to do.\n\n"
     };
 
     void Start()
