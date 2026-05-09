@@ -8957,6 +8957,7 @@ MonoBehaviour:
   victorySound: {fileID: 809207032}
   lossSound: {fileID: 809207033}
   detectionCanvas: {fileID: 1642496005}
+  mainMenuButton: {fileID: 0}
   winMessage: Pike survived the night!!
   winText: {fileID: 292948227}
 --- !u!4 &809207031
@@ -19682,7 +19683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 611172842912772813, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103
+      value: 92
       objectReference: {fileID: 0}
     - target: {fileID: 611172842912772813, guid: f3e09932c69c44de6af4b48fbce540b1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23475,6 +23476,7 @@ MonoBehaviour:
   - 'Digby: "And stay out of the barn. That''s my space."'
   - 'Digby: "Don''t come knocking. I won''t answer."'
   detectionCanvas: {fileID: 1642496005}
+  carrotHintUI: {fileID: 0}
 --- !u!4 &2122021022
 Transform:
   m_ObjectHideFlags: 0
